@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Plant Care Assistant</title>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f9f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    main h2 {
+      color: #4CAF50;
+    }
+
+    main p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e6f5ea;
+      --df-messenger-button-titlebar-color: #4CAF50;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000000;
+      --df-messenger-send-icon: #4CAF50;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Virtual Plant Care Assistant
+  </header>
+
+  <main>
+    <h2>Welcome!</h2>
+    <p>Need help taking care of your plants? Ask our Virtual Assistant for watering tips, sunlight needs, pest advice, and more!</p>
+    <p>Click the chat icon in the bottom right to get started.</p>
+  </main>
+
+  <df-messenger
+    intent="WELCOME"
+    chat-title="VirtualPlantCareAssistant"
+    agent-id="5bbb73fa-620f-44d9-8139-4aa5649bc0c2"
+    language-code="en"
+  ></df-messenger>
+
+</body>
+</html>
